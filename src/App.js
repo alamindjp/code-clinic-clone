@@ -30,6 +30,7 @@ import CppIntro from "./Pages/Components/Courses/CppCourse/CppIntro";
 import JavascriptQa from "./Pages/Components/Home/CompilerHome/InterviewPrep/JavascriptQa";
 import HtmlQa from "./Pages/Components/Home/CompilerHome/InterviewPrep/HtmlQa";
 import UserProfile from "./Pages/UserDashboard/UserProfile";
+import Profile from "./Pages/UserDashboard/Profile";
 
 
 function App() {
@@ -45,7 +46,6 @@ function App() {
         <Route path="/about" element={<About />}></Route>
         <Route path="/Editor" element={<Editor />}></Route>
         <Route path="/quiz" element={<Quiz />}></Route>
-        <Route path="/profile" element={<UserProfile />}></Route>
 
 
         <Route path="/introduction" element={<Introduction />}></Route>
@@ -137,8 +137,18 @@ function App() {
         </Route>
 
         <Route path="*" element={<NotFound />} />
-      </Routes>
+      
+      {/* User Profile route  */}
+      
+        <Route path="/dashboard" element={<UserProfile />}>
+          <Route index element={<Profile />}></Route>
 
+          <Route
+            path="/dashboard/education"
+            element={<Intro />}
+          />
+        </Route>
+      </Routes>
       <Footer />
     </div>
   );

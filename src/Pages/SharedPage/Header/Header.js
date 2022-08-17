@@ -161,7 +161,7 @@ const Header = () => {
               {user ? <><div><img className="icon p-0 rounded-full" src={user?.photoURL} alt="user" /></div>
                 <ul className="p-5 text-white absolute right-0 bg-slate-800">
                   <div className="w-[200px] flex flex-col text-white">
-                    <Link className="py-1 pl-2 mb-1 hover:bg-slate-900 rounded-md" to='/profile'>Profile</Link>
+                    <Link className="py-1 pl-2 mb-1 hover:bg-slate-900 rounded-md" to='/dashboard'>Profile</Link>
                     <Link className="py-1 pl-2 mb-1 hover:bg-slate-900 rounded-md" to='/quiz'>Student-Analytics</Link>
                     <Link className="py-1 pl-2 mb-1 hover:bg-slate-900 rounded-md" to='/quiz'>Announcement</Link>
                   <button className="py-1 pl-2 mb-1 hover:bg-slate-900 rounded-md text-start " onClick={logout}>Log Out</button>
